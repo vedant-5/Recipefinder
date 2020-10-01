@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//import Recipe from "./components/Recipe";
+import Navbar from "./components/Navbar";
+import Home from "./Home";
+import "./App.css";
+import "./components/Recipe.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+////CUPCAKE CONSTANT ON LANDING PAGE
+
+//const [cakes, setCake] = useState([]);
+
+//useEffect(() => {
+//  cupcake();
+//});
+
+//const cupcake = async () => {
+//const res = await fetch(
+//`https://cors-anywhere.herokuapp.com/https://recipesapi.herokuapp.com/api/search?q=${cupcake}`
+//);
+//const cakeData = await res.json();
+//const cupcakeRecipe = cakeData.recipes;
+//setCake(cupcakeRecipe);
+//console.log(setCake);
+//};
+
+//<div>
+//       {cakes.map((cake) => (
+//       <Cupcake
+//       key={cake._id}
+//     title={cake.title}
+//   image_url={cake.image_url}
+///>
+//   ))}
+//</div>
+
+//const Cupcake = (title, image_url, _id) => (
+// <div key={_id}>
+// <h1>{title}</h1>
+//<img src={image_url} alt="cups" />
+//</div>
+//);

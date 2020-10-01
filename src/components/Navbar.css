@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(255, 70, 49);
+  margin-top: 7px;
+}
+
+.navImg {
+  margin: 7px 20px 7px 92px;
+}
+
+.navName {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  margin-top: 25px;
+}
