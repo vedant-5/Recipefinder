@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./components/Recipe";
+import { Link } from "react-router-dom";
 
 function Recipepage() {
   const [recipes, setRecipes] = useState([]);
@@ -27,7 +28,7 @@ function Recipepage() {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch(" ");
+    setSearch(search);
   };
 
   return (
@@ -41,10 +42,11 @@ function Recipepage() {
             type="/text"
             className="searchBar"
           />
-
-          <button type="submit" className="searchButton">
-            Search
-          </button>
+          <Link to={`/recipes`}>
+            <button type="submit" className="searchButton">
+              Search
+            </button>
+          </Link>
         </form>
       </div>
 
@@ -54,6 +56,7 @@ function Recipepage() {
             key={recipe._id}
             title={recipe.title}
             image_url={recipe.image_url}
+            link={recipe.recipe_id}
           />
         ))}
       </div>

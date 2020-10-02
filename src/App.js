@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar";
 import Home from "./Home";
 import "./App.css";
 import "./components/Recipe.css";
+//import Recipepage from "./Recipepage";
+import Ingredient from "./components/Ingredient";
+import Recipepage from "./Recipepage";
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/recipes" component={Recipepage} />
+          <Route path="/recipes/:id" component={Ingredient} />
         </Switch>
       </Router>
     </div>
