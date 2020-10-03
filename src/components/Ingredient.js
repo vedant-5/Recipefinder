@@ -27,11 +27,17 @@ function Ingredient({ match }) {
   return (
     <div className="ingredientPage">
       <div className="ingredientBox">
+        <div className="imageBox">
+          <img className="ingredientImage" src={ingredients.image_url} />
+        </div>
+        <hr />
         <h1 className="ingredientHead">{ingredients.title}</h1>
-        <img className="ingredientImage" src={ingredients.image_url} />
-        {ingredients.ingredients.map((ingredient) => (
-          <li>{ingredient}</li>
-        ))}
+
+        <div className="ingredentList">
+          {ingredients.ingredients.map((ingredient) => (
+            <li>{ingredient}</li>
+          ))}
+        </div>
       </div>
     </div>
   );

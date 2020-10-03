@@ -5,11 +5,12 @@
 
 .ingredientBox {
   margin-top: 50px;
+  margin-bottom: 100px;
   padding: 50px;
-
   justify-content: center;
-
+  background-color: rgb(245, 245, 245);
   border: 2px solid salmon;
+  box-shadow: -10px 8px 34px -17px rgba(38, 21, 28, 0.71);
 }
 
 .ingredientHead {
@@ -17,11 +18,29 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.imageBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .ingredientImage {
   width: 300px;
   height: 300px;
-
   border-radius: 2px;
+}
+
+hr {
+  border: 1px solid salmon;
+}
+
+.ingredentList {
+  margin: 20px 30px;
+  list-style-type: disc;
+  font-family: "Open Sans", sans-serif;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./components/Recipe";
 import { Link } from "react-router-dom";
+import searchImage from "./search.svg";
 
 function Recipepage() {
   const [recipes, setRecipes] = useState([]);
@@ -33,6 +34,7 @@ function Recipepage() {
 
   return (
     <div>
+      <img src={searchImage} alt="apples" className="apple" />
       <div className="searchSection">
         <form onSubmit={getSearch} className="searchForm">
           <input
@@ -42,11 +44,10 @@ function Recipepage() {
             type="/text"
             className="searchBar"
           />
-          <Link to={`/recipes`}>
-            <button type="submit" className="searchButton">
-              Search
-            </button>
-          </Link>
+
+          <button type="submit" className="searchButton">
+            Search
+          </button>
         </form>
       </div>
 

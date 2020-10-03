@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/recipes" component={Recipepage} />
+
           <Route path="/recipes/:id" component={Ingredient} />
         </Switch>
       </Router>
@@ -25,6 +25,8 @@ function App() {
 }
 
 export default App;
+
+//<Route path="/recipes" component={Recipepage} />
 
 ////CUPCAKE CONSTANT ON LANDING PAGE
 
