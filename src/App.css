@@ -10,6 +10,7 @@
   align-items: center;
   z-index: 1;
   vertical-align: center;
+  padding-top: 180px;
 }
 
 .apple {
@@ -35,15 +36,28 @@
 }
 
 .defaultSearch {
-  margin-top: 500px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  margin-top: 300px;
+  width: 600px;
+  height: 400px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  z-index: 1;
 }
 
 .cupCake {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: inline-grid;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: auto auto auto;
+}
+
+.cakeTitle {
+  font-size: 20px;
+}
+
+.cakeImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }

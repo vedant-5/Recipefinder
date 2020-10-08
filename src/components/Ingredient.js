@@ -7,6 +7,7 @@ function Ingredient({ match }) {
     title: "",
     ingredients: [],
     image_url: "",
+    recipe_id: "",
   });
 
   useEffect(() => {
@@ -28,7 +29,11 @@ function Ingredient({ match }) {
     <div className="ingredientPage">
       <div className="ingredientBox">
         <div className="imageBox">
-          <img className="ingredientImage" src={ingredients.image_url} />
+          <img
+            className="ingredientImage"
+            src={ingredients.image_url}
+            key={ingredients.recipe_id}
+          />
         </div>
         <hr />
         <h1 className="ingredientHead">{ingredients.title}</h1>

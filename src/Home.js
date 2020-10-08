@@ -25,11 +25,11 @@ function Home() {
   return (
     <div>
       <Recipepage />
-      <div className="defaultSearch">
-        {cupcake.slice(0, 5).map((cake) => (
+      <div className="cupCake">
+        {cupcake.slice(0, 6).map((cake) => (
           <div key={cake._id}>
-            <h1 className="recipeImage">{cake.title}</h1>
-            <img className="recipeTitle" src={cake.image_url} alt="cupcakes" />
+            <img className="cakeImage" src={cake.image_url} alt="cupcakes" />
+            <h1 className="cakeTitle">{cake.title}</h1>
           </div>
         ))}
       </div>

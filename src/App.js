@@ -16,7 +16,6 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-
           <Route path="/recipes/:id" component={Ingredient} />
         </Switch>
       </Router>
