@@ -1,7 +1,22 @@
 import React from "react";
+import Recipe from  "./Recipe";
+import "./Recipe.css";
 
-function List() {
-  return <h1>hello</h1>;
+function Recipelist({recipes}) {
+
+  return (
+    <div className="defaultSearch">
+        {recipes.map((recipe) => (
+          <Recipe
+            key={recipe._id}
+            title={recipe.title}
+            image_url={recipe.image_url}
+            link={recipe.recipe_id}
+          />
+        ))}
+      </div>
+  )
+  
 }
 
-export default List;
+export default Recipelist;

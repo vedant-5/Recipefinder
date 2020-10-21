@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./components/Recipe";
-import { Link } from "react-router-dom";
 import searchImage from "./search.svg";
+import  {useHistory} from 'react-router-dom';
 
-function Recipepage() {
-  const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState(" ");
+const  Recipepage = ({setRecipes})=> {
+ 
+  let history = useHistory();
+  const [search, setSearch] = useState("");
   const [query, setQuery] = useState();
 
   useEffect(() => {
@@ -29,7 +30,9 @@ function Recipepage() {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch(search);
+    setSearch();
+    history.push(`/recipes`)
+    
   };
 
   return (
@@ -50,19 +53,12 @@ function Recipepage() {
           </button>
         </form>
       </div>
+      
 
-      <div className="defaultSearch">
-        {recipes.map((recipe) => (
-          <Recipe
-            key={recipe._id}
-            title={recipe.title}
-            image_url={recipe.image_url}
-            link={recipe.recipe_id}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 }
+
 
 export default Recipepage;

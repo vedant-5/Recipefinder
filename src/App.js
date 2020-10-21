@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import Recipe from "./components/Recipe";
 import Navbar from "./components/Navbar";
@@ -7,15 +7,23 @@ import "./App.css";
 import "./components/Recipe.css";
 //import Recipepage from "./Recipepage";
 import Ingredient from "./components/Ingredient";
+import Recipelist from "./components/Recipelist";
 import Recipepage from "./Recipepage";
 
 function App() {
+
+  const [recipes, setRecipes] = useState([]);
+  
   return (
     <div>
       <Navbar />
       <Router>
+        <Recipepage recipes={recipes} setRecipes={setRecipes}/>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/recipes" exact>
+            <Recipelist recipes={recipes} setRecipes={setRecipes}/>
+          </Route>
           <Route path="/recipes/:id" component={Ingredient} />
         </Switch>
       </Router>
